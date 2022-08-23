@@ -1,0 +1,45 @@
+body{
+    background-image: url('https://github.com/Leenok/eldritch-codejam/blob/main/assets/home.png?raw=true');
+    display: flex;
+    justify-content: space-around;
+}
+
+.leval{
+    background-color: rgba(240, 248, 255, 0.562);
+    padding: 15px;
+    width: 200px;
+}
+/*ancient*/
+.ancient{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+.ancient>img{
+    height: 390px;
+}
+/*cards */
+.staige{
+    display: flex;
+    color: wheat;
+}
+.point{
+    border-radius: 25px;
+    color: rgb(3, 0, 0);
+    margin: 10px;
+    padding: 7px;
+    font-weight: 800;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+.coloda>img{
+    height: 250px;
+}

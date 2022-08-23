@@ -1,1 +1,3 @@
-export const hi = "Hello";
+export function sayHi(user) {
+  alert(`Hello, ${user}!`);
+}

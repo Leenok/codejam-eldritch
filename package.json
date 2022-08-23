@@ -1,0 +1,23 @@
+{
+  "name": "codejam-eldritch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mod.js",
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leenok/codejam-eldritch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leenok/codejam-eldritch/issues"
+  },
+  "homepage": "https://github.com/Leenok/codejam-eldritch#readme"
+}

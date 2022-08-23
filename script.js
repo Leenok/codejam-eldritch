@@ -1,9 +1,13 @@
-import difficulties from './data/difficulties.js';
+//import { app } from 'mod.js';
+/*import difficulties from './data/difficulties.js';
 console.log(difficulties);
 
-import hi from "./mod.js";
-console.log(hi);
-
+*/
+//let aa = require();
+console.log("sayHi");
+//import {sayHi} from 'sayHi.js';
+const getBlogTitle = require('./mod.js');
+console.log(getBlogTitle);
 /* выбор карты */
 const ancients = document.querySelector('.ancient');
 let card = "Cthulthu";

@@ -10,12 +10,11 @@
     <link type="image/x-icon" rel="shortcut icon" href="file_type_eslint_icon_130613.ico">
 </head>
 <body>
-    
-    <div class="ancient">
-        <img class="all" src="assets/Ancients/Cthulthu.png" alt="Cthulthu">
-        <img src="assets/Ancients/ShubNiggurath.png" alt="ShubNiggurath">
-        <img src="assets/Ancients/IogSothoth.png" alt="IogSothoth">
-        <img src="assets/Ancients/Azathoth.png" alt="Azathoth">
+   <div class="ancient">
+        <img src="assets/Ancients/Cthulthu.png" alt="cthulhu">
+        <img src="assets/Ancients/ShubNiggurath.png" alt="shubNiggurath">
+        <img src="assets/Ancients/IogSothoth.png" alt="iogSothoth">
+        <img src="assets/Ancients/Azathoth.png" alt="azathoth">
         
     </div>
     
@@ -23,35 +22,34 @@
         <p>Ваш выбор: <br> Древнего: <span class="chooseCard">Cthulthu</span><br> уровень: <span class="chleval">lite</span></p>
         <p>Выбор уровня:</p>
         <select id="select">
-            <option value="lite">легкий</option>
-            <option value="norm">нормальный</option>
+            <option value="easy">легкий</option>
+            <option value="normal">нормальный</option>
             <option value="hard">сложный</option>
         </select>
     </div>
     <div class="cards">
         <div>
-            <div class="staige">этап: 1
-                <p class="green point">1</p>
-                <p class="yellow point">2</p>
-                <p class="blue point">1</p>
+            <div class="st">
+                <p>Этап: 1</p>
+                <div class="st1"></div>
+                <p>Этап: 2</p>
+                <div class="st2"></div>
+                <p>Этап: 3</p>
+                <div class="st3"></div>
+                <p>Всего:</p>
+                <div class="oobz"></div>
             </div>
-            <div class="staige">этап: 2
-                <p class="green point">2</p>
-                <p class="yellow point">3</p>
-                <p class="blue point">1</p>
-            </div>
-            <div class="staige">этап: 3
-                <p class="green point">2</p>
-                <p class="yellow point ">4</p>
-                <p class="blue point">0</p>
-            </div>
+           
         </div>
         <div class="coloda">
-            <img src="assets/mythicCardBackground.png" alt="coloda">
-            <img src="assets/MythicCards/blue/blue1.png" alt="checkcard">
+            <div class="kolod">0/21</div>
+            <img class="rubhide hide" src="assets/mythicCardBackground.png" alt="coloda">
+            <img class="rubshow hide" src="" alt="checkcard">
+            <div class="namekard"></div>
         </div>
     </div>
-    <script src="script.js"></script>
+
     
+    <script  type="module" src="./script.js"></script>
 </body>
 </html>

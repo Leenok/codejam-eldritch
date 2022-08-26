@@ -1,5 +1,5 @@
 body{
-    background-image: url('https://github.com/Leenok/eldritch-codejam/blob/main/assets/home.png?raw=true');
+    background-image: url('assets/home.png');
     display: flex;
     justify-content: space-around;
 }
@@ -20,26 +20,37 @@ body{
     height: 390px;
 }
 /*cards */
-.staige{
-    display: flex;
-    color: wheat;
+.st, .coloda{
+    background-color: rgba(250, 235, 215, 0.637);
+    padding: 10px;
+    margin: 15px; 
 }
-.point{
-    border-radius: 25px;
-    color: rgb(3, 0, 0);
-    margin: 10px;
-    padding: 7px;
-    font-weight: 800;
-}
-.green{
-    background-color: green;
-}
-.yellow{
-    background-color: yellow;
-}
-.blue{
-    background-color: blue;
+.coloda{
+    width: 350px;
 }
 .coloda>img{
     height: 250px;
+   
+}
+.hide{
+    opacity: 0;
+}
+.st1, .st2, .st3{
+    display: flex;
+}
+.p{
+    color: aliceblue;
+    padding: 7px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 25px;
+}
+.green{
+    background: rgb(9, 104, 14);
+}
+.brown{
+    background: rgb(87, 44, 9);
+}
+.blue{
+    background: rgb(13, 88, 122);
 }

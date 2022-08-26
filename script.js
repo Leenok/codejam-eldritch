@@ -113,7 +113,7 @@ let z = 0;
 
 rubh.addEventListener('click',function showcard(){
     rubsh.classList.remove('hide');
-    if(z == itogpack.length){
+    if(z+1 == itogpack.length){
         rubh.classList.add('hide');
         return false;
     }

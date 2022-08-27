@@ -1,5 +1,4 @@
 import ancientsData from "./data/ancients.js";
-/* import данных  карт  */
 import cardsDataBrown from "./data/mythicCards/brown/index.js";
 import cardsDataBlue from "./data/mythicCards/blue/index.js";
 import cardsDataGreen from "./data/mythicCards/green/index.js"
@@ -8,7 +7,12 @@ import cardsDataGreen from "./data/mythicCards/green/index.js"
 function shuffle(a, b) {
     return Math.random()-0.5;
 }
-
+let levelname = {
+    "veryeasy": "Очень легкий", "easy":"Легкий", "normal":"Средний", "hard":"Высокий", "veryhard":"Очень высокий"
+}
+let namedrevn = {
+    "cthulhu":"Ктулху", "shubNiggurath":"Шуб-Ниггурат", "iogSothoth":"Йог-Сотот", "azathoth":"Азатот"
+}
 let stnombers= [[0,0,0],[0,0,0],[0,0,0]];// grin(st1,2,3) brow, blue
 
 /*write stages колличество карт*/
@@ -17,23 +21,25 @@ function writestages(){
     document.querySelector('.st2').innerHTML =`<div class="p green">${stnombers[0][1]}</div> <div class="p brown">${stnombers[1][1]}</div><div class="p blue">${stnombers[2][1]}</div> `;
     document.querySelector('.st3').innerHTML =`<div class="p green">${stnombers[0][2]}</div> <div class="p brown">${stnombers[1][2]}</div><div class="p blue">${stnombers[2][2]}</div> `;
 }
-//writestages();
 
 /* выбор древнего */
 let colod = document.querySelector('.cards');
 const ancients = document.querySelector('.ancient');
 let card = "";
-let leavel = "normal";
-let indexDrev =0;
+let leavel = "";
+let indexDrev = 0;
 ancients.addEventListener( "click" , (e) => {
     card = e.target.alt;
-    document.querySelector('.chooseCard').innerHTML = card;
+    leavel = "";
+    document.querySelector('.chleval').innerHTML = '';
+    document.querySelector('.chooseCard').innerHTML = namedrevn[card];
     indexDrev = ancientsData.findIndex(x=> x.name == card);
     
     
     colod.classList.add('hide');
     rubh.classList.remove('hide');
     rubsh.classList.add('hide');
+    
    
 });
 let allgreen = 0;
@@ -59,10 +65,9 @@ function updatestagekol(drevniy){
     allgreen = stnombers[0].reduce((a,b)=>a+b, 0);
     allblue = stnombers[2].reduce((a,b)=>a+b, 0);
     allbrown = stnombers[1].reduce((a,b)=>a+b, 0);
-    document.querySelector('.oobz').innerHTML = "green: "+allgreen+" brown: "+allbrown+ " blue: "+allblue;  
 }
 
-/*filter  карты for easy */
+/*filter  карты for leval */
 let browneasy =[];
 let greeneasy = [];
 let blueeasy = []
@@ -120,14 +125,13 @@ function veryhardcards(){
     }
 }
 
-
 /* выбор уровня */
 let leval = document.getElementById('select');
 leval.addEventListener('change', function(e){
     updatestagekol(ancientsData[indexDrev]);//обновл данные по картам по уровням  
     colod.classList.remove('hide');
     leavel = e.target.value;
-    document.querySelector('.chleval').innerHTML = leavel;
+    document.querySelector('.chleval').innerHTML = levelname[leavel];
     if(leavel == "veryeasy"){
         veryeasycards();
     }
@@ -147,15 +151,11 @@ leval.addEventListener('change', function(e){
         writestages();
         zames(ancientsData[indexDrev], browneasy, greeneasy, blueeasy);
     }
-    
 });
-
-
 
 let itogpack = [];
 
 function zames(x, br, gr, blu){
-/*level normal */
     let packgreen = gr.sort(shuffle).slice(0, allgreen);
     let packbrown = br.sort(shuffle).slice(0, allbrown);
     let packblue = blu.sort(shuffle).slice(0, allblue);
@@ -172,12 +172,6 @@ function zames(x, br, gr, blu){
 
     let packst3 = packgreen.concat(packbrown, packblue).sort(shuffle);
     itogpack = packst1.concat(packst2, packst3);
-    console.log("pk1");
-    console.log(packst1);
-    console.log("pk2");
-    console.log(packst2);
-    console.log("pk3");
-    console.log(packst3);
     z = 0;
 }
 
@@ -185,18 +179,12 @@ let rubh = document.querySelector('.rubhide');
 let rubsh = document.querySelector('.rubshow');
 
 
-/*dvivod crd */
-let namek = document.querySelector('.namekard');
-  
+/*vivod crd */
 let z = 0;
-
 rubh.addEventListener('click',function showcard(){
     rubsh.classList.remove('hide');
-    
-    // let ry = `https://github.com/Leenok/codejam-eldritch/blob/main/assets/MythicCards/${itogpack[z].color}/${itogpack[z].cardFace}?raw=true}`
      let yy = `assets/MythicCards/${itogpack[z].color}/${itogpack[z].cardFace}`;
      rubsh.src = yy;
-     namek.innerHTML = itogpack[z].cardFace;
      mincolor(itogpack[z].color);
      z++;
      if(z == itogpack.length){
@@ -217,8 +205,6 @@ function mincolor(color){
         stnombers[cc][0]-- ;
     }
     
-    console.log(cc);
-    console.log(stnombers);
     writestages();
 
 }

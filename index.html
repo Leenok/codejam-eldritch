@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="style.css">
     <title>eldritch-codejam</title>
     <link type="image/x-icon" rel="shortcut icon" href="file_type_eslint_icon_130613.ico">
@@ -15,11 +14,9 @@
         <img src="assets/Ancients/ShubNiggurath.png" alt="shubNiggurath">
         <img src="assets/Ancients/IogSothoth.png" alt="iogSothoth">
         <img src="assets/Ancients/Azathoth.png" alt="azathoth">
-        
     </div>
     
     <div class="leval">
-        <p>Ваш выбор: <br> Древнего: <span class="chooseCard"></span><br> уровень: <span class="chleval"></span></p>
         <p>Выбор уровня:</p>
         <select id="select">
             <option value=""> </option>
@@ -29,25 +26,24 @@
             <option value="hard">Высокий</option>
             <option value="veryhard">Очень высокий</option>
         </select>
+        <div> 
+            <p class="ch"> Ваш выбор: </p> 
+            <p> Древний: <span class="chooseCard"></span></p>
+            <p> Уровень: <span class="chleval"></span></p>
+        </div>    
     </div>
     <div class="cards hide">
-        <div>
-            <div class="st">
-                <p>Этап: 1</p>
-                <div class="st1"></div>
-                <p>Этап: 2</p>
-                <div class="st2"></div>
-                <p>Этап: 3</p>
-                <div class="st3"></div>
-                <p>Всего:</p>
-                <div class="oobz"></div>
-            </div>
-           
+        <div class="st">
+            <p>Этап: 1</p>
+            <p class="st1"></p>
+            <p>Этап: 2</p>
+            <p class="st2"></p>
+            <p>Этап: 3</p>
+            <p class="st3"></p>
         </div>
         <div class="coloda">
             <img class="rubhide hide" src="assets/mythicCardBackground.png" alt="coloda">
             <img class="rubshow hide" src="" alt="checkcard">
-            <div class="namekard"></div>
         </div>
     </div>
 

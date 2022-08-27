@@ -11,9 +11,10 @@ body{
 }
 /*ancient*/
 .ancient{
+    width: 650px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
     
 }
 .ancient>img{
@@ -21,16 +22,20 @@ body{
 }
 /*cards */
 .st, .coloda{
-    background-color: rgba(250, 235, 215, 0.637);
-    padding: 10px;
+    background-color: rgba(240, 248, 255, 0.562);
+    padding: 7px;
     margin: 15px; 
 }
+
+.cards{
+    width: 500px;
+}
 .coloda{
-    width: 350px;
+    display: flex;
 }
 .coloda>img{
-    height: 250px;
-   
+    width: 210px;
+   margin: 7px;
 }
 .hide{
     opacity: 0;
@@ -53,4 +58,13 @@ body{
 }
 .blue{
     background: rgb(13, 88, 122);
+}
+
+.ch{
+    background-color: rgba(0, 0, 0, 0.733);
+    color: aliceblue;
+    padding: 7px;
+}
+p{
+    font-weight: 700;
 }
